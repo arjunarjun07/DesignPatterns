@@ -1,9 +1,8 @@
-// DPProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include "Creational/FactoryMethod.h"
 #include "Creational/AbstractFactory.h"
+#include "Creational/Builder.h"
+
 
 void FactoryMethodTest()
 {
@@ -46,11 +45,40 @@ void AbstractFitureFactoryTest()
 
 }
 
+void BuilderTest()
+{
+	PizzaDirector director;
+	IPizzaBuilder* builder = new MargharittaPizzaBuilder();
+
+	director.setPizzaBuilder(builder);
+
+	Pizza* pizza = director.constructPizza();
+	
+	std::cout << "Pizza size : " << pizza->getSize() << std::endl;
+	std::cout << "Pizza crust : " << pizza->getCrustType() << std::endl;
+	std::cout << "Pizza toppings : ";
+	
+	for (auto topping : pizza->getToppings())
+	{
+		std::cout << topping << " ";
+	}
+	
+	std::cout << std::endl;
+	
+	//pizza will get deleted implicitly when builder is deleted
+	delete builder;
+
+	//setting pizza to null to avoid dangling pointer
+	pizza = nullptr;
+}
+
 int main()
 {
-	FactoryMethodTest();
+	//FactoryMethodTest();
 
-	AbstractFitureFactoryTest();
+	//AbstractFitureFactoryTest();
+
+	BuilderTest();
 
 	return 0;
 }
