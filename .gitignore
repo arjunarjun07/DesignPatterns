@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+DPProject/.vs
+DPProject/DPProject/Debug
+DPProject/Debug
