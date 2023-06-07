@@ -21,7 +21,7 @@
     <ClCompile Include="Source\Creational\FactoryMethod.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Header\Creational\AbstractFactory.cpp">
+    <ClCompile Include="Source\Creational\AbstractFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

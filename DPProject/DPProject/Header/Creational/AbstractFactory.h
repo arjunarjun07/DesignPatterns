@@ -3,8 +3,6 @@
 
 #include "stdafx.h"
 
-#endif // !ABSTRACTFACTORY_H
-
 /*
 * About:
 	Abstract Factory defines an interface for creating all distinct products but leaves the 
@@ -101,3 +99,5 @@ public:
 	IChair* createChair() override;
 	ITable* createTable() override;
 };
+
+#endif // !ABSTRACTFACTORY_H
