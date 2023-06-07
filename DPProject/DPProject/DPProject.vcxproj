@@ -142,7 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Header\Creational\Builder.cpp" />
+    <ClCompile Include="Source\Creational\Builder.cpp" />
     <ClCompile Include="Source\Creational\AbstractFactory.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Creational\FactoryMethod.cpp" />
