@@ -145,6 +145,7 @@
     <ClCompile Include="Source\Creational\Builder.cpp" />
     <ClCompile Include="Source\Creational\AbstractFactory.cpp" />
     <ClCompile Include="Source\Creational\Prototype.cpp" />
+    <ClCompile Include="Source\Creational\Singleton.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Creational\FactoryMethod.cpp" />
   </ItemGroup>
@@ -153,6 +154,7 @@
     <ClInclude Include="Header\Creational\Builder.h" />
     <ClInclude Include="Header\Creational\FactoryMethod.h" />
     <ClInclude Include="Header\Creational\Prototype.h" />
+    <ClInclude Include="Header\Creational\Singleton.h" />
     <ClInclude Include="Header\stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
