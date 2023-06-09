@@ -12,6 +12,8 @@ Database* Database::getInstance()
 	{
 		m_instance = new Database();
 	}
+
+	return m_instance;
 }
 
 void Database::queryData()

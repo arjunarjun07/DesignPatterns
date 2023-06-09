@@ -1,8 +1,12 @@
 #include <iostream>
+
 #include "Creational/FactoryMethod.h"
 #include "Creational/AbstractFactory.h"
 #include "Creational/Builder.h"
 #include "Creational/Prototype.h"
+#include "Creational/Singleton.h"
+
+#include "Structural\Adapter.h"
 
 
 void FactoryMethodTest()
@@ -94,15 +98,51 @@ void prototypeTest()
 
 }
 
+void SingletonTest()
+{
+	Database* db_singleton = Database::getInstance();
+	db_singleton->queryData();
+}
+
+void AdapterTest()
+{
+	//actual implementation
+	IUsbDevice* usbDevice = new UsbDevice();
+	usbDevice->Connect();
+	usbDevice->TransferData();
+	usbDevice->Disconnect();
+
+	//adapter
+	IUsbDevice* typeCDevice = new TypeCAdapter(new UsbDevice());
+	typeCDevice->Connect();
+	typeCDevice->TransferData();
+	typeCDevice->Disconnect();
+
+	delete usbDevice;
+	delete typeCDevice;
+}
+
 int main()
 {
+	//------------------------------------------
+	// Creational Design Patterns
+	// -----------------------------------------
+	
 	//FactoryMethodTest();
 
 	//AbstractFitureFactoryTest();
 
 	//BuilderTest();
 	
-	prototypeTest();
+	//prototypeTest();
+
+	//SingletonTest();
+
+	//------------------------------------------
+	// Structural Design Patterns
+	// -----------------------------------------
+
+	AdapterTest();
 
 	return 0;
 }
