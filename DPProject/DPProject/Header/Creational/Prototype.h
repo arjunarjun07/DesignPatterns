@@ -71,6 +71,8 @@ private:
 	string m_color;
 };
 
+//a centralized prototype registry to store a catalog of frequently used prototypes.
+
 class ShapePrototypeRegistry
 {
 
