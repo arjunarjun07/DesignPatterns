@@ -29,6 +29,10 @@
 class IShape
 {
 public:
+
+
+	//This will clone the data members based on default copy constructor. But we need to implement userdefined copy constructor to clone the data members when dynamic memory allocation is involved.
+
 	virtual IShape* clone() = 0;
 
 	virtual void draw() = 0;
