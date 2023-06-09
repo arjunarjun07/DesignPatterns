@@ -85,6 +85,8 @@ public:
 
 	static void addShape(string shapeID, IShape* shapeIns);
 
+	~ShapePrototypeRegistry();
+
 private:
 	static std::unordered_map<string, IShape*> shapeMap;
 };

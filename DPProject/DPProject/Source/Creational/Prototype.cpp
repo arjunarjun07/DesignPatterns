@@ -46,3 +46,11 @@ void ShapePrototypeRegistry::addShape(string shapeID, IShape* shapeIns)
 {
 	shapeMap[shapeID] = shapeIns;
 }
+
+ShapePrototypeRegistry::~ShapePrototypeRegistry()
+{
+	for (auto& shape : shapeMap)
+	{
+		delete shape.second;
+	}
+}
