@@ -2,6 +2,7 @@
 #include "Creational/FactoryMethod.h"
 #include "Creational/AbstractFactory.h"
 #include "Creational/Builder.h"
+#include "Creational/Prototype.h"
 
 
 void FactoryMethodTest()
@@ -72,13 +73,36 @@ void BuilderTest()
 	pizza = nullptr;
 }
 
+void prototypeTest()
+{
+	IShape* circle = new Circle(10, "Red");
+	IShape* rectangle = new Rectangle(10, 40, "Blue");
+
+	ShapePrototypeRegistry::addShape("RedCircle", circle);
+	ShapePrototypeRegistry::addShape("BlueRectangle", rectangle);
+
+	IShape* clonedShape1 = ShapePrototypeRegistry::getShape("RedCircle");
+	IShape* clonedShape2 = ShapePrototypeRegistry::getShape("BlueRectangle");
+
+	clonedShape1->draw();
+	clonedShape2->draw();
+
+	delete circle;
+	delete rectangle;
+	delete clonedShape1;
+	delete clonedShape2;
+
+}
+
 int main()
 {
 	//FactoryMethodTest();
 
 	//AbstractFitureFactoryTest();
 
-	BuilderTest();
+	//BuilderTest();
+	
+	prototypeTest();
 
 	return 0;
 }

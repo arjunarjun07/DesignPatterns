@@ -13,6 +13,13 @@
 *	Imagine you're building a pizza ordering system. The pizza can have various toppings, crust types, and sizes. The Builder pattern can help you construct different pizza configurations while keeping the construction logic separate from the client code.
 */
 
+/*
+Uses:
+	-  Use the Builder pattern to get rid of a “telescoping constructor”. (To avoid beasty constructors with many params)
+	- Use the Builder pattern when you want your code to be able to create different representations of some product (for example, stone and wooden houses).
+	- Use the Builder to construct Composite trees or other complex objects. You can even call steps recursively, which comes in handy when you need to build an object tree.
+*/
+
 //Product
 
 class Pizza

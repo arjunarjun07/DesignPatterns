@@ -78,10 +78,3 @@ PizzaDirector::~PizzaDirector()
     //if (m_builder)
     //    delete m_builder;
 }
-
-/*
-Uses:
-    -  Use the Builder pattern to get rid of a “telescoping constructor”. (To avoid beasty constructors with many params)
-    - Use the Builder pattern when you want your code to be able to create different representations of some product (for example, stone and wooden houses).
-    - Use the Builder to construct Composite trees or other complex objects. You can even call steps recursively, which comes in handy when you need to build an object tree.
-*/
