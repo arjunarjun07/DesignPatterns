@@ -7,7 +7,7 @@
 #include "Creational/Singleton.h"
 
 #include "Structural\Adapter.h"
-
+#include "Structural\Facade.h"
 
 void FactoryMethodTest()
 {
@@ -122,6 +122,15 @@ void AdapterTest()
 	delete typeCDevice;
 }
 
+void FacadeTest() 
+{
+	Computer computer(new Cpu(), new Memory(), new Storage());
+
+	computer.start();
+	computer.stop();
+
+}
+
 int main()
 {
 	//------------------------------------------
@@ -142,7 +151,9 @@ int main()
 	// Structural Design Patterns
 	// -----------------------------------------
 
-	AdapterTest();
+	//AdapterTest();
+
+	FacadeTest();
 
 	return 0;
 }

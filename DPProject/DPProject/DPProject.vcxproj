@@ -149,6 +149,7 @@
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Creational\FactoryMethod.cpp" />
     <ClCompile Include="Source\Structural\Adapter.cpp" />
+    <ClCompile Include="Source\Structural\Facade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Creational\AbstractFactory.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="Header\Creational\Singleton.h" />
     <ClInclude Include="Header\stdafx.h" />
     <ClInclude Include="Header\Structural\Adapter.h" />
+    <ClInclude Include="Header\Structural\Facade.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
